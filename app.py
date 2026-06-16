@@ -1,11 +1,3 @@
-import sys
-st.write(sys.version)
-import streamlit as st
-import sys
-st.write(sys.version)
-import joblib
-st.write("Joblib imported successfully")
-
 import streamlit as st
 import pandas as pd
 import joblib
@@ -50,14 +42,15 @@ if st.button("Predict"):
     })
 
     cat_cols = [
-    'job',
-    'marital',
-    'education',
-    'default',
-    'housing',
-    'loan',
-    'month'
-]
+        'job',
+        'marital',
+        'education',
+        'default',
+        'housing',
+        'loan',
+        'month'
+    ]
+
     for col in cat_cols:
         df[col] = encoder[col].transform(df[col])
 
@@ -67,4 +60,3 @@ if st.button("Predict"):
         st.success("Customer Will Subscribe")
     else:
         st.error("Customer Will Not Subscribe")
-        
