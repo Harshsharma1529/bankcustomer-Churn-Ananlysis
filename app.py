@@ -1,3 +1,9 @@
+import sys
+st.write(sys.version)
+
+import joblib
+st.write("Joblib imported successfully")
+
 import streamlit as st
 import pandas as pd
 import joblib
